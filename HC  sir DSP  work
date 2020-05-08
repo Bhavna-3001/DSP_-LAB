@@ -1,0 +1,42 @@
+import thinkdsp as d 
+w1=d.SinSignal(freq=329 ,amp=5,offset=0)
+w1_wave= w1.make_wave(duration=1.5,start=0,framerate=4200)
+
+w2=d.SinSignal(freq=311 ,amp=5,offset=0)
+w2_wave= w2.make_wave(duration=1.5,start=1.5,framerate=4200)
+
+w3=d.SinSignal(freq=277 ,amp=5,offset=0)
+w3_wave= w3.make_wave(duration=1.5,start=3,framerate=4200)
+
+w4=d.SinSignal(freq=493 ,amp=5,offset=0)
+w4_wave= w4.make_wave(duration=1.5,start=4.5,framerate=4200)
+
+w5=d.SinSignal(freq=277 ,amp=5,offset=0)
+w5_wave= w5.make_wave(duration=1.5,start=6,framerate=4200)
+
+w6=d.SinSignal(freq=311 ,amp=5,offset=0)
+w6_wave= w6.make_wave(duration=1.5,start=7.5,framerate=4200)
+
+w7=d.SinSignal(freq=466 ,amp=5,offset=0)
+w7_wave= w7.make_wave(duration=1.5,start=9,framerate=4200)
+
+w8=d.SinSignal(freq=493 ,amp=5,offset=0)
+w8_wave= w8.make_wave(duration=1.5,start=10.5,framerate=4200)
+
+w9=d.SinSignal(freq=261 ,amp=5,offset=0)
+w9_wave= w9.make_wave(duration=1.5,start=12,framerate=4200)
+
+w10=d.SinSignal(freq=293,amp=5,offset=0)
+w10_wave= w10 .make_wave(duration=1.5,start=13.5,framerate=4200)
+
+
+
+
+from IPython.display import Audio 
+
+d = w1_wave+w2_wave+w3_wave+w4_wave+w5_wave+w6_wave+w7_wave+w8_wave+w9_wave+w10_wave
+
+audio=Audio(data=d.ys,rate=d.framerate)
+d.make_audio()
+####################
+
